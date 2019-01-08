@@ -5,6 +5,7 @@ class rect : public shape
 {
 public:
 	rect(const std::string &);
+	virtual void create() override;
 	virtual void setXandY()override;
 	virtual void setColor()override;
 	virtual void setSize() override;

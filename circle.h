@@ -5,6 +5,7 @@ class circle :public shape
 {
 public:
 	circle(const std::string &);
+	virtual void create() override;
 	virtual void sayName() override;
 	virtual void setXandY() override;
 	virtual void setColor() override;

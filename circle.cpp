@@ -49,11 +49,20 @@ void circle::setSize()
 }
 void circle::setStorkeWidth()
 {
-	string holdstrokwidth;
-	cout << "if you want stroke width enter yes else enter no " << endl;
-	cin >> holdstrokwidth;
-	if ("no" != holdstrokwidth) {
 		cout << "stroke width = ";
 		cin >> strokewidth;
-	}
+}
+void circle::create()
+{
+	string holder;
+	setXandY();
+	setSize();
+	cout << "Do you want to set color (yes or no): ";
+	cin >> holder;
+	if ("no" != holder)
+		setColor();
+	cout << "Do you want set stroke width (yes or no) : ";
+	cin >> holder;
+	if ("no" != holder)
+		setStorkeWidth();
 }
