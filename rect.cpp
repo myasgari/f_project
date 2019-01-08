@@ -20,19 +20,21 @@ void rect::setXandY()
 }
 void rect::setColor()
 {
-  std::string holdstroke;
-  std::string holdopacity;
+  string holdstroke;
+  string holdopacity;
   cout<<"please enter the color of your regtangel"<<endl;
   cin>>color;
-  cout<<"entre thr color of the stroke *if you do not want it enter no*"<<endl;
+  cout<<"if you want stroke color enter yes else enter no "<<endl;
   cin>>holdstroke;
   if ("no" != holdstroke){
-    strokecolor = holdstroke;
+		cout<< "stroke color = ";
+    cin >>strokecolor;
   }
-  cout<<"entre thr color of the stroke *if you do not want it enter no*"<<endl;
+  cout<<"if you want opacity enter yes else enter no "<<endl;
   cin>>holdopacity;
   if ("no" != holdopacity){
-    opacity=holdopacity;
+		cout<<"opacity = ";
+    cin >>opacity;
   }
 }
 void rect::setSize()
@@ -43,7 +45,13 @@ void rect::setSize()
   cout<<"enter the widht = ";
   cin>>widht;
 }
-void rect::strokewidth()
+void rect::setStrokewidth()
 {
-
+	string holdstrokwidth;
+	cout<<"if you want stroke width enter yes else enter no "<<endl;
+	cin>>holdstrokwidth;
+	if ("no" != holdstrokwidth){
+		cout<<"stroke width = ";
+		cin>>strokewidth;
+	}
 }
