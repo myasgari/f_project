@@ -4,15 +4,19 @@
 class rect : public shape
 {
 public:
-	rect();
-	 virtual void setXandY()override;
-	 virtual void setColor()override;
-   virtual void setSize();
+	rect(const std::string &);
+	virtual void setXandY()override;
+	virtual void setColor()override;
+	virtual void setSize() override;
+	virtual void setStorkeWidth()override;
+	virtual void sayName() override;
 	~rect();
 private:
 	float X, Y;
 	std::string color;
-  std::string strokecolor;
-  std::string opacity;
-  float hight,widht;
+	float strokecolor;
+	float opacity;
+	float hight, widht;
+	float strokewidth;
+	std::string name;
 };
