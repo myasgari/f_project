@@ -12,11 +12,11 @@ circle::~circle()
 }
 void circle::sayName()
 {
-  cout<<name;
+	cout << name<<" ";
 }
 void circle::setXandY()
 {
-  cout << "please enter the x and y for your position in picture" << endl;
+	cout << "please enter the x and y for your position in picture" << endl;
 	cout << "enter x = ";
 	cin >> X;
 	cout << "enter y = ";
@@ -24,7 +24,7 @@ void circle::setXandY()
 }
 void circle::setColor()
 {
-  string holdstroke;
+	string holdstroke;
 	string holdopacity;
 	cout << "please enter the color of your circle" << endl;
 	cin >> color;
@@ -43,13 +43,13 @@ void circle::setColor()
 }
 void circle::setSize()
 {
-  cout<<"enter the Raduc of your circle"<<endl;
-  cout<<"Raduc = ";
-  cin>>Raduc;
+	cout << "enter the Raduc of your circle" << endl;
+	cout << "Raduc = ";
+	cin >> Raduc;
 }
 void circle::setStorkeWidth()
 {
-  string holdstrokwidth;
+	string holdstrokwidth;
 	cout << "if you want stroke width enter yes else enter no " << endl;
 	cin >> holdstrokwidth;
 	if ("no" != holdstrokwidth) {
