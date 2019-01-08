@@ -3,8 +3,9 @@
 #include <string>
 
 using namespace std;
-rect::rect()
+rect::rect(const string &name)
 {
+	this ->name =name;
 }
 rect::~rect()
 {
@@ -41,4 +42,8 @@ void rect::setSize()
   cin>>hight;
   cout<<"enter the widht = ";
   cin>>widht;
+}
+void rect::strokewidth()
+{
+
 }
