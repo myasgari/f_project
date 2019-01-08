@@ -5,7 +5,7 @@
 using namespace std;
 rect::rect(const string &name)
 {
-	this ->name =name;
+	this->name = name;
 }
 rect::~rect()
 {
@@ -20,38 +20,42 @@ void rect::setXandY()
 }
 void rect::setColor()
 {
-  string holdstroke;
-  string holdopacity;
-  cout<<"please enter the color of your regtangel"<<endl;
-  cin>>color;
-  cout<<"if you want stroke color enter yes else enter no "<<endl;
-  cin>>holdstroke;
-  if ("no" != holdstroke){
-		cout<< "stroke color = ";
-    cin >>strokecolor;
-  }
-  cout<<"if you want opacity enter yes else enter no "<<endl;
-  cin>>holdopacity;
-  if ("no" != holdopacity){
-		cout<<"opacity = ";
-    cin >>opacity;
-  }
+	string holdstroke;
+	string holdopacity;
+	cout << "please enter the color of your regtangel" << endl;
+	cin >> color;
+	cout << "if you want stroke color enter yes else enter no " << endl;
+	cin >> holdstroke;
+	if ("no" != holdstroke) {
+		cout << "stroke color = ";
+		cin >> strokecolor;
+	}
+	cout << "if you want opacity enter yes else enter no " << endl;
+	cin >> holdopacity;
+	if ("no" != holdopacity) {
+		cout << "opacity = ";
+		cin >> opacity;
+	}
 }
 void rect::setSize()
 {
-  cout<<"enter the hight and widht of regtangel"<<endl;
-  cout<< "enter the hight = ";
-  cin>>hight;
-  cout<<"enter the widht = ";
-  cin>>widht;
+	cout << "enter the hight and widht of regtangel" << endl;
+	cout << "enter the hight = ";
+	cin >> hight;
+	cout << "enter the widht = ";
+	cin >> widht;
 }
-void rect::setStrokewidth()
+void rect::setStorkeWidth()
 {
 	string holdstrokwidth;
-	cout<<"if you want stroke width enter yes else enter no "<<endl;
-	cin>>holdstrokwidth;
-	if ("no" != holdstrokwidth){
-		cout<<"stroke width = ";
-		cin>>strokewidth;
+	cout << "if you want stroke width enter yes else enter no " << endl;
+	cin >> holdstrokwidth;
+	if ("no" != holdstrokwidth) {
+		cout << "stroke width = ";
+		cin >> strokewidth;
 	}
+}
+void rect::sayName()
+{
+	cout << name;
 }
