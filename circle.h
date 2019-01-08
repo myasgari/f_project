@@ -13,4 +13,10 @@ public:
 	~circle();
 private:
 	std::string name;
+	float X, Y;
+	float Raduc;
+	std::string color;
+	float strokecolor;
+	float opacity;
+	float strokewidth;
 };
