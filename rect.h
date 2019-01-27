@@ -11,13 +11,15 @@ public:
 	virtual void setSize() override;
 	virtual void setStorkeWidth()override;
 	virtual void sayName() override;
+	virtual std::string Export() override;
 	~rect();
 private:
 	float X, Y;
 	std::string color;
-	float strokecolor;
-	float opacity;
+	std::string strokecolor ;
+	float opacity=-10;
 	float hight, widht;
-	float strokewidth;
+	float strokewidth=-10;
 	std::string name;
+	std::string write1;
 };

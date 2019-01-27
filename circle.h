@@ -11,13 +11,15 @@ public:
 	virtual void setColor() override;
 	virtual void setSize() override;
 	virtual void setStorkeWidth() override;
+	virtual std::string Export() override;
 	~circle();
 private:
 	std::string name;
 	float X, Y;
 	float Raduc;
 	std::string color;
-	float strokecolor;
-	float opacity;
-	float strokewidth;
+	std::string strokecolor ;
+	float opacity=-10;
+	float strokewidth=-10;
+	std::string write1;
 };

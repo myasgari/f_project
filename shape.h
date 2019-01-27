@@ -11,6 +11,4 @@ public:
 	virtual void setStorkeWidth() = 0;
 	virtual void sayName() = 0;
 	~shape();
-private:
-	std::string write;
 };
