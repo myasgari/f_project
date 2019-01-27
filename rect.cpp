@@ -68,3 +68,15 @@ void rect::create()
 		if ("no" != holder)
 			setStorkeWidth();
 }
+string rect::Export()
+{
+	write1 = "\n\<rect x= \"" + std::to_string(X) + "\" y= \"" + std::to_string(Y) + "\" width = \"" + std::to_string(widht) + "\" hight = \"" +
+		std::to_string(hight) + "\" fill = \"" + color + "\" ";
+	if (opacity != -10)
+		write1 += "opacity =\"" + std::to_string(opacity) + "\"";
+	if (strokewidth = !- 10)
+		write1 += "stroke-width =\"" + std::to_string(strokewidth) + "\" ";
+	if (strokecolor.empty() != false)
+		write1 += "stroke = \"" + strokecolor + "\"";
+	return write1;
+}

@@ -67,3 +67,14 @@ void ellipse::create()
 		if ("no" != holder)
 			setStorkeWidth();
 }
+string ellipse::Export()
+{
+	write1 = "\n\<ellipse cx= \"" + std::to_string(X) + "\" cy= \"" + std::to_string(Y) + "\" fill = \"" + color + "\" ";
+	if (opacity != -10)
+		write1 += "opacity =\"" + std::to_string(opacity) + "\"";
+	if (strokewidth = !- 10)
+		write1 += "stroke-width =\"" + std::to_string(strokewidth) + "\" ";
+	if (strokecolor.empty() != false)
+		write1 += "stroke = \"" + strokecolor + "\"";
+	return write1;
+}
