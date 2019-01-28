@@ -6,19 +6,22 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include <typeinfo>
 using namespace std;
+
 int enterChois()
 {
-	cout << "1-create\t2-erase\t3-erase all\t4-list\t5-export" << endl;
-	char chose;
+	cout << "1-create  2-erase  3-erase all  4-list  5-export  6-exit" << endl;
+    int chose;
 	cin >> chose;
 	return chose;
 }
 void create(vector<shape *>&shape)
 {
 	cout << "which object do want to draw ?" << endl;
-	cout << "1-circle\t2-rect\tellipse" << endl;
+	cout << "1-circle  2-rect  3-ellipse" << endl;
 	int in;
+	cin >> in;
 	cout << "enter the object name :";
 	string name;
 	cin >> name;
@@ -30,30 +33,12 @@ void create(vector<shape *>&shape)
 		shape.push_back(new ellipse(name));
 	shape[shape::Count]->create();
 }
-void list(vector<shape *>&shap)
+void list(const vector<shape *>&shap)
 {
-	for (shape *shapeptr : shap)
+	for (int i = 0; i < shap.size(); i++)
 	{
-		cout << "rect = ";
-		rect *type = dynamic_cast<rect *>(shapeptr);
-		if (type != nullptr)
-			type->sayName();
-		delete shapeptr;
-	}
-	for (shape *shapeptr : shap)
-	{
-		cout << "circle = ";
-		circle *type = dynamic_cast<circle *>(shapeptr);
-		if (type != nullptr)
-			type->sayName();
-		delete shapeptr;
-	}
-	for (shape *shapeptr : shap)
-	{
-		cout << "ellipse = ";
-		ellipse *type = dynamic_cast<ellipse *>(shapeptr);
-		if (type != nullptr)
-			type->sayName();
-		delete shapeptr;
+		cout << "name : ";
+		shap[i]->sayName();
+		cout << " , type : " << typeid(*shap[i]).name() << endl;
 	}
 }
