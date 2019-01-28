@@ -42,3 +42,20 @@ void list(const vector<shape *>&shap)
 		cout << " , type : " << typeid(*shap[i]).name() << endl;
 	}
 }
+void erase(vector<shape *>&shape)
+{
+	int i = 0;
+	list(shape);
+	cout << "which object do want to delete : ";
+	string name;
+	cin >> name;
+	for (i; i < shape.size(); i++) {
+		if (name == (shape[i]->sayName()))
+			break;
+	}
+	for (i; i < shape.size(); i++) {
+		shape[i] = shape[i + 1];
+	}
+	shape::Count -= 1;
+	shape.pop_back();
+}
