@@ -10,5 +10,6 @@ public:
 	virtual void setSize() = 0;
 	virtual void setStorkeWidth() = 0;
 	virtual void sayName() = 0;
+	static unsigned int Count;
 	~shape();
 };
