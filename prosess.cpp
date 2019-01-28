@@ -30,3 +30,30 @@ void create(vector<shape *>&shape)
 		shape.push_back(new ellipse(name));
 	shape[shape::Count]->create();
 }
+void list(vector<shape *>&shap)
+{
+	for (shape *shapeptr : shap)
+	{
+		cout << "rect = ";
+		rect *type = dynamic_cast<rect *>(shapeptr);
+		if (type != nullptr)
+			type->sayName();
+		delete shapeptr;
+	}
+	for (shape *shapeptr : shap)
+	{
+		cout << "circle = ";
+		circle *type = dynamic_cast<circle *>(shapeptr);
+		if (type != nullptr)
+			type->sayName();
+		delete shapeptr;
+	}
+	for (shape *shapeptr : shap)
+	{
+		cout << "ellipse = ";
+		ellipse *type = dynamic_cast<ellipse *>(shapeptr);
+		if (type != nullptr)
+			type->sayName();
+		delete shapeptr;
+	}
+}
