@@ -35,16 +35,12 @@ void line::setColor()
 	cout << "Do you want to set color (yes or no) :";
 	string holder;
 	cin >> holder;
-	if (holder != "no") {
-		cout << "color : ";
+	if (holder != "no")
 		cin >> color;
-	}
 	cout << "and do you want to set stroke width (yes or no) : ";
 	cin >> holder;
-	if (holder != "no") {
-		cout << "stroke width : ";
+	if (holder != "no")
 		cin >> strokeWidht;
-	}
 }
 string line::Export()
 {

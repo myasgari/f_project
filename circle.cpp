@@ -70,10 +70,10 @@ string circle::Export()
 {
 	write1 = "\n<circle cx=\"" + std::to_string(X) + "\" cy=\"" + std::to_string(Y) + "r =\"" + std::to_string(Raduc) + "\" fill = \"" + color + "\" ";
 	if (opacity != -10)
-		write1 += "opacity =\"" + std::to_string(opacity) + "\"";
+		write1 += " opacity =\"" + std::to_string(opacity) + "\"";
 	if (strokewidth = !- 10)
-		write1 += "stroke-width =\"" + std::to_string(strokewidth) + "\" ";
+		write1 += " stroke-width =\"" + std::to_string(strokewidth) + "\" ";
 	if (strokecolor.empty() != false)
-		write1 += "stroke = \"" + strokecolor + "\"";
+		write1 += " stroke = \"" + strokecolor + "\"";
 	return write1;
 }
