@@ -6,6 +6,7 @@ void create(vector<shape *> &);
 void list(vector<shape *>&);
 void erase(vector<shape *>&)
 int enterChois();
+void createFile(vector<shape *>&,fstream &);
 int main()
 {
 

@@ -59,3 +59,13 @@ void erase(vector<shape *>&shape)
 	shape::Count -= 1;
 	shape.pop_back();
 }
+void createFile(vector<shape *>&shape,fstream &pic)
+{
+	pic << setprecision(2) << fixed;
+	string write = "<?xml version=\"1.0\" standalone=\"no\"?>\n<!DOCTYPE svg PUBLIC \" -//W3C//DTD SVG 1.1//EN\"\n\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n<svg width=\"400\" height=\"400\"\nxmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">";
+	pic << write;
+	for (int i = 0; i < shape.size(); i++)
+		pic << shape[i]->Export();
+	pic << "\n</svg>";
+	cout << "export finish succefully" << endl;
+}
