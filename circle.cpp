@@ -10,9 +10,9 @@ circle::circle(const string &name)
 circle::~circle()
 {
 }
-void circle::sayName()
+string circle::sayName()
 {
-	cout << name<<" ";
+	return name;
 }
 void circle::setXandY()
 {
@@ -68,7 +68,7 @@ void circle::create()
 }
 string circle::Export()
 {
-	write1 = "\n\<circle cx= \"" + std::to_string(X) + "\" cy= \"" + std::to_string(Y) + "r = \"" + std::to_string(Raduc) + "\" fill = \"" + color + "\" ";
+	write1 = "\n<circle cx=\"" + std::to_string(X) + "\" cy=\"" + std::to_string(Y) + "r =\"" + std::to_string(Raduc) + "\" fill = \"" + color + "\" ";
 	if (opacity != -10)
 		write1 += "opacity =\"" + std::to_string(opacity) + "\"";
 	if (strokewidth = !- 10)
