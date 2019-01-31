@@ -6,9 +6,9 @@ ellipse::ellipse(const string & name)
 {
 	this->name = name;
 }
-void ellipse::sayName()
+string ellipse::sayName()
 {
-	cout << name << " ";
+	return name ;
 }
 void ellipse::setXandY()
 {
@@ -69,12 +69,42 @@ void ellipse::create()
 }
 string ellipse::Export()
 {
-	write1 = "\n\<ellipse cx= \"" + std::to_string(X) + "\" cy= \"" + std::to_string(Y) + "\" fill = \"" + color + "\" ";
-	if (opacity != -10)
-		write1 += "opacity =\"" + std::to_string(opacity) + "\"";
-	if (strokewidth = !- 10)
-		write1 += "stroke-width =\"" + std::to_string(strokewidth) + "\" ";
-	if (strokecolor.empty() != false)
-		write1 += "stroke = \"" + strokecolor + "\"";
+	if (animat == false) {
+		write1 = "\n\<ellipse cx=\"" + std::to_string(X) + "\" cy=\"" + std::to_string(Y) + "\" fill=\"" + color + "\" " + "rx=\"" + std::to_string(widht) + "\" ry=\"" + std::to_string(hight) + "\" ";
+		if (opacity != -10)
+			write1 += " opacity =\"" + std::to_string(opacity) + "\"";
+		if (strokewidth = !- 10)
+			write1 += " stroke-width =\"" + std::to_string(strokewidth) + "\" ";
+		if (strokecolor.empty() != true)
+			write1 += " stroke = \"" + strokecolor + "\" ";
+		write1 += "/>";
+	}
+	if (animat == true) {
+		write1 = "\n\<ellipse cx=\"" + std::to_string(X) + "\" cy=\"" + std::to_string(Y) + "\" fill=\"" + color + "\" " + "rx=\"" + std::to_string(widht) + "\" ry=\"" + std::to_string(hight) + "\" ";
+		if (opacity != -10)
+			write1 += " opacity =\"" + std::to_string(opacity) + "\"";
+		if (strokewidth = !- 10)
+			write1 += " stroke-width =\"" + std::to_string(strokewidth) + "\" ";
+		if (strokecolor.empty() != true)
+			write1 += " stroke = \"" + strokecolor + "\" ";
+		write1 += " >";
+		write1 += "\n<animate attributeType=\"XML\" attributeName=\"" + attributeName + "\" from=\"" + std::to_string(from) + "\" to=\"" + std::to_string(to) + "\" dur=\"" +
+			std::to_string(time) + "s\" repeatCount=\"" + std::to_string(repeatCount) + "\" />";
+		write1 += "\n</ellipse>";
+	}
 	return write1;
+}
+void ellipse::animatation()
+{
+	animat = true;
+	cout << "plz enter the time duration of object : ";
+	cin >> time;
+	cout << "enter attributeName : ";
+	cin >> attributeName;
+	cout << "enter ,animation start from : ";
+	cin >> from;
+	cout << "to : ";
+	cin >> to;
+	cout << "and at end plz enter repeatCount : ";
+	cin >> repeatCount;
 }

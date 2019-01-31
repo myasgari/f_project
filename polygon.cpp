@@ -36,7 +36,7 @@ void polygon::setPoint()
 		if (holder == "n")
 			break;
 	}
-	cout << "\n point finishes \n";
+	cout << " point finishes \n";
 	cout << "do want to set color (yes or no) : ";
 	cin >> holder;
 	if (holder == "yes")
@@ -55,4 +55,8 @@ string polygon::Export()
 	write1 += "\" fill=\"" + color + "\" ";
 	write1 += " />";
 	return write1;
+}
+void polygon::animatation()
+{
+
 }

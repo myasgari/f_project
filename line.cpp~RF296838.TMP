@@ -50,3 +50,7 @@ string line::Export()
 	write1 += "/>";
 	return write1;
 }
+void line::animatation()
+{
+
+}
