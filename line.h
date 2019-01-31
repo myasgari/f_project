@@ -10,6 +10,7 @@ public:
 	virtual std::string Export() override;
 	virtual void setXandY();
 	virtual void setColor();
+	virtual void animatation() override;
 private:
 	int x1, y1, x2, y2;
 	std::string Name;

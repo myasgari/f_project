@@ -6,20 +6,24 @@ class circle :public shape
 public:
 	circle(const std::string &);
 	virtual void create() override;
-	virtual void sayName() override;
-	virtual void setXandY() override;
-	virtual void setColor() override;
-	virtual void setSize() override;
-	virtual void setStorkeWidth() override;
+	virtual std::string sayName() override;
+	virtual void setXandY() ;
+	virtual void setColor() ;
+	virtual void setSize() ;
+	virtual void setStorkeWidth() ;
 	virtual std::string Export() override;
+	virtual void animatation() override;
 	~circle();
 private:
 	std::string name;
-	float X, Y;
-	float Raduc;
-	std::string color;
+	int X, Y;
+	int Raduc;
+	std::string color="black";
 	std::string strokecolor ;
 	float opacity=-10;
 	float strokewidth=-10;
 	std::string write1;
+	bool animat = false;
+	int time ,from, to;
+	int repeatCount;
 };

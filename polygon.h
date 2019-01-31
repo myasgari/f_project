@@ -10,6 +10,7 @@ public:
 	virtual std::string sayName() override;
 	virtual std::string Export() override;
 	virtual void setPoint();
+	virtual void animatation() override;
 	~polygon();
 private:
 	std::string Name;
