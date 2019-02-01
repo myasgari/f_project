@@ -12,7 +12,9 @@ public:
 	virtual void setStorkeWidth();
 	virtual std::string sayName() override;
 	virtual std::string Export() override;
-	virtual void animatation() override;
+	virtual void animatation(const std::string &) override;
+	virtual std::string sayAnimatName() override;
+	virtual void animOff() override;
 	~rect();
 private:
 	int X, Y;
@@ -27,4 +29,5 @@ private:
 	int time, from, to;
 	int repeatCount;
 	std::string attributeName;
+	std::string animatName;
 };

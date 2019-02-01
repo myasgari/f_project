@@ -12,7 +12,9 @@ public:
 	virtual void setSize() ;
 	virtual void setStorkeWidth() ;
 	virtual std::string Export() override;
-	virtual void animatation() override;
+	virtual void animatation(const std::string &) override;
+	virtual std::string sayAnimatName() override;
+	virtual void animOff() override;
 	~circle();
 private:
 	std::string name;
@@ -26,4 +28,5 @@ private:
 	bool animat = false;
 	int time ,from, to;
 	int repeatCount;
+	std::string animatName;
 };
