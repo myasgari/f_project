@@ -50,3 +50,11 @@ string scatter::Export()
 		data.seekg(0);
 		return write1;
 }
+
+void scatter::animOff(){}
+void scatter::animatation(const string &name){}
+string scatter::sayAnimatName()
+{
+	string a;
+	return a;
+}
