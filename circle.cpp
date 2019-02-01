@@ -94,8 +94,9 @@ string circle::Export()
 	}
 	return write1;
 }
-void circle::animatation()
+void circle::animatation(const string &name)
 {
+	animatName = name;
 	animat = true;
 	cout << "plz enter the time duration of object : ";
 	cin >> time;
@@ -105,4 +106,16 @@ void circle::animatation()
 	cin >> to;
 	cout << "and at end plz enter repeatCount : ";
 	cin >> repeatCount;
+}
+string circle::sayAnimatName()
+{
+	string holder;
+	if (animat == false)
+		return holder;
+	else
+		return animatName;
+}
+void circle::animOff()
+{
+	animat == false;
 }

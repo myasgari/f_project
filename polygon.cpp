@@ -44,19 +44,59 @@ void polygon::setPoint()
 }
 string polygon::Export()
 {
-	write1 += "\n<polygon points=\"";
-	for (int i = 0; i < points.size(); i++)
-	{
-		write1 += std::to_string(points[i]);
-		write1 += ",";
-		write1 += std::to_string(points[i + 1])+" ";
-		i++;
+	if (animat == false) {
+		write1 += "\n<polygon points=\"";
+		for (int i = 0; i < points.size(); i++)
+		{
+			write1 += std::to_string(points[i]);
+			write1 += ",";
+			write1 += std::to_string(points[i + 1]) + " ";
+			i++;
+		}
+		write1 += "\" fill=\"" + color + "\" ";
+		write1 += " />";
 	}
-	write1 += "\" fill=\"" + color + "\" ";
-	write1 += " />";
+	if (animat == true) {
+		write1 += "\n<polygon points=\"";
+		for (int i = 0; i < points.size(); i++)
+		{
+			write1 += std::to_string(points[i]);
+			write1 += ",";
+			write1 += std::to_string(points[i + 1]) + " ";
+			i++;
+		}
+		write1 += "\" fill=\"" + color + "\" ";
+		write1 += " >";
+		write1 += "\n<animate attributeType=\"XML\" attributeName=\"" + attributeName + "\" from=\"" + std::to_string(from) + "\" to=\"" + std::to_string(to) + "\" dur=\"" +
+			std::to_string(time) + "s\" repeatCount=\"" + std::to_string(repeatCount) + "\" />";
+		write1 += "\n</polygon>";
+	}
 	return write1;
 }
-void polygon::animatation()
+void polygon::animatation(const string &name)
 {
-
+	animatName = name;
+	animat = true;
+	cout << "plz enter the time duration of object : ";
+	cin >> time;
+	cout << "enter attributeName : ";
+	cin >> attributeName;
+	cout << "enter ,animation start from : ";
+	cin >> from;
+	cout << "to : ";
+	cin >> to;
+	cout << "and at end plz enter repeatCount : ";
+	cin >> repeatCount;
+}
+string polygon::sayAnimatName()
+{
+	string holder;
+	if (animat == false)
+		return holder;
+	else
+		return animatName;
+}
+void polygon::animOff()
+{
+	animat == false;
 }

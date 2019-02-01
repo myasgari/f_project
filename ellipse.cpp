@@ -94,8 +94,9 @@ string ellipse::Export()
 	}
 	return write1;
 }
-void ellipse::animatation()
+void ellipse::animatation(const string &name)
 {
+	animatName = name;
 	animat = true;
 	cout << "plz enter the time duration of object : ";
 	cin >> time;
@@ -107,4 +108,16 @@ void ellipse::animatation()
 	cin >> to;
 	cout << "and at end plz enter repeatCount : ";
 	cin >> repeatCount;
+}
+string ellipse::sayAnimatName()
+{
+	string holder;
+	if (animat == false)
+		return holder;
+	else
+		return animatName;
+}
+void ellipse::animOff()
+{
+	animat == false;
 }

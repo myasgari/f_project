@@ -99,8 +99,9 @@ string rect::Export()
 
 	return write1;
 }
-void rect::animatation()
+void rect::animatation(const string &name)
 {
+	animatName = name;
 	animat = true;
 	cout << "plz enter the time duration of object : ";
 	cin >> time;
@@ -112,4 +113,16 @@ void rect::animatation()
 	cin >> to;
 	cout << "and at end plz enter repeatCount : ";
 	cin >> repeatCount;
+}
+string rect::sayAnimatName()
+{
+	string holder;
+	if (animat == false)
+		return holder;
+	else
+		return animatName;
+}
+void rect::animOff()
+{
+	animat == false;
 }
